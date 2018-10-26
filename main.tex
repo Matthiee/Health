@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{epstopdf}
 \usepackage{csquotes}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \usepackage[
     style=apa,
@@ -25,6 +26,7 @@
     backref=false,
 %    firstinits=false,
 ]{biblatex}
+\usepackage[toc]{glossaries}
 
 \DeclareLanguageMapping{british}{british-apa}
 
@@ -38,16 +40,45 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%=============================================================================
+%% Wordlist
+%%=============================================================================
+
+\newglossaryentry{AD}
+{
+	name={AD},
+	description={Alzheimer's disease}
+}
+
+\newglossaryentry{QoL}
+{
+	name={QoL},
+	description={Quality of Life}
+}
+
+\makenoidxglossaries
+
+%%=============================================================================
+%% Document
+%%=============================================================================
+
 \title{%
   Personal research paper about health \\
   \large An alternative view on some common health issues \\ }
 \author{Matthias Beerens}
 
-%\keywords{petri net, recall, long term working memory, expert domain knowledge}
+%\keywords{health}
 
 \begin{document}
 
+\pagestyle{fancy} % Print headers again
 \maketitle
+
+%---------- Index ------------------------------------------------------
+\tableofcontents % Print the table of contents itself
+
+% worldlist
+\printnoidxglossaries
 
 \input{loader}
 
