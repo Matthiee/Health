@@ -27,6 +27,10 @@
 %    firstinits=false,
 ]{biblatex}
 \usepackage[toc]{glossaries}
+\usepackage{graphicx}        % Images
+\usepackage{wrapfig}
+\graphicspath{{imgs/}}       % Specifies the directory where pictures are stored
+\usepackage{caption}
 
 \DeclareLanguageMapping{british}{british-apa}
 
@@ -55,6 +59,31 @@
 	name={QoL},
 	description={Quality of Life}
 }
+
+\newglossaryentry{NPi}
+{
+	name={NPi},
+	description={Nocturnal Polyuria index}
+}
+
+\newglossaryentry{NUV}
+{
+	name={NUV},
+	description={Nocturnal urinary volume}
+}
+
+\newglossaryentry{MVV}
+{
+	name={MVV},
+	description={Maximum voided volume}
+}
+
+\newglossaryentry{DI}
+{
+	name={DI},
+	description={diabetes insipidus}
+}
+
 
 \makenoidxglossaries
 
